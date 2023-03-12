@@ -3,6 +3,7 @@ body{
     margin-left: 20vw;
     margin-right: 20vw;
 }
+
 .mem_image{
     display: none;
 }
@@ -20,6 +21,10 @@ body{
     padding-top: 2vh;
     padding-bottom: 2vh;
 }
+.icon_for_mem{
+    display: block;
+}
+
 @media (min-width:820px){
     .bayan_mem:hover img{
         display:block;
@@ -28,10 +33,21 @@ body{
     .bayan_mem:hover {
         cursor:pointer;
     }
-    .bayan_mem:hover i{
+    .bayan_mem:hover .icon_for_mem{
         animation: revers_x 0.2s linear;
         animation-fill-mode: forwards;
     }
+    .bayan:not(:hover) .bayan_mem:has(input:not(:checked)) {
+        color:blue;
+    }
+    
+    .bayan:hover .icon_for_mem{
+        display: block;
+    }
+    .bayan:not(:hover) .icon_for_mem{
+        display: none;
+    }
+ 
 }
 @keyframes sized{
     0%{
@@ -42,8 +58,18 @@ body{
 @keyframes revers_x{
     100%{
         transform: rotate(65deg);
-
     }
+}
+.bayan_mem:has(input:checked) .mem_image{
+    display:block;
+    animation: sized 0.2s linear;
+
+}
+.bayan_mem:active{
+    opacity: 0.7;
+    cursor: grab;
+    color: blue;
+    
 }
 
 
