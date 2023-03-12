@@ -1,0 +1,53 @@
+body{
+    margin-left: 0;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.mem_image{
+    display: none;
+}
+.picture_for_mem{
+    margin-left: 12vw;
+    padding-top: 2vh;
+    transition: 2s;
+    
+}
+.text_for_mem{
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vh;
+    font-weight: bolder;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+@media (min-width:820px){
+    .bayan_mem:hover img{
+        display:block;
+        animation: sized 0.2s linear;
+    }
+    .bayan_mem:hover {
+        cursor:pointer;
+    }
+    .bayan_mem:hover i{
+        animation: revers_x 0.2s linear;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes sized{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+}
+@keyframes revers_x{
+    100%{
+        transform: rotate(65deg);
+
+    }
+}
+
+
+
+
+
+
